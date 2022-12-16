@@ -15,7 +15,7 @@ const Home = () => {
 
     useEffect(() => {
         const sendRequest = async () => {
-            const response = await fetch('https://vazne.pythonanywhere.com/shop/',{
+            const response = await fetch('https://fakestoreapi.com/products',{
                 method:'GET',
                 mode:'cors',
             })

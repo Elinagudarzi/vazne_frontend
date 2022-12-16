@@ -7,9 +7,10 @@ import { Router } from "@reach/router";
 //Pages
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
+import ProductPages from "./Pages/productPages";
 
 function App() {
-  const [theme] = useThemeHook();  
+  const [theme] = useThemeHook();
   return (
     <div className="App">
       <main className={theme ? 'bg-black' : 'bg-light-2'} style={{ height: '100vh', overflowY: 'auto' }}>
@@ -17,6 +18,7 @@ function App() {
         <Router>
           <Home path="/" />
           <Cart path="/cart" />
+          <ProductPages path="/productpages" />
         </Router>
       </main>
     </div>

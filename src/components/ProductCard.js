@@ -2,8 +2,10 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useThemeHook } from '../Globalcomponents/ThemeProvider';
 import { useCart } from 'react-use-cart';
-import { BsCartPlus, BsInfoCircle} from 'react-icons/bs';
+import { BsCartPlus, BsInfoCircle } from 'react-icons/bs';
 import { Link } from "@reach/router";
+
+
 
 const ProductCard = (props) => {
     let { image, price, title, id } = props.data;
@@ -42,16 +44,13 @@ const ProductCard = (props) => {
                     <BsCartPlus size="1.8rem" />
                     افزودن به سبد خرید
                 </Button>
-                <Button
-                    style={{ marginTop: '10px' }}
-                    onClick={'/'}
 
 
-                >
-                    <BsInfoCircle style={{paddingRight:'5px'}} size="1.5rem"/>
-
+                <Button href='productpages' style={{padding:"7px 21px 7px 21px", border: "0px", marginTop: "5px", backgroundColor: "#191659" }} >
+                    <BsInfoCircle size="1.3rem" style={{marginRight:"10px"}} />
                     جزيیات محصول
                 </Button>
+
             </Card.Body>
         </Card>
     );
