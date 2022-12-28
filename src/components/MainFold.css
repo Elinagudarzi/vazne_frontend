@@ -1,0 +1,53 @@
+.MainFold{
+    background-color: rgb(242, 242, 247);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20PX;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transform: scale(90%);
+    transition: 2s;
+}
+.MainFold--zoom{
+    opacity: 1;
+    transform: scale(90%);
+    transition: 2s;
+}
+
+.MainFold__image{
+    width:60%;
+    opacity: 1;
+
+}
+
+
+.MainFold__content{
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding: 20%;
+    text-align:center;
+}
+
+.MainFold__title{
+    text-align: center;
+    position: sticky; 
+    bottom: 20%;
+    color: rgb(40, 4, 97);
+    font-size: 3rem;
+    padding: 20%;
+}
+
+.MainFold__subtitle{
+    text-align: center;
+    position: sticky; 
+    bottom: 30%;
+    color: rgb(96, 44, 218);
+    font-size: 1rem;
+    padding: 20%;
+    flex-direction:row;
+}
