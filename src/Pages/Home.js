@@ -11,13 +11,13 @@ const Home = () => {
     const [searchInput, setSearchInput] = useState('');
 
 
+
     const [productData, setProductData] = useState([]);
 
     useEffect(() => {
         const sendRequest = async () => {
-            const response = await fetch('https://fakestoreapi.com/products',{
-                method:'GET',
-                mode:'cors',
+            const response = await fetch('http://127.0.0.1:8000/shop/list/',{
+                
             })
             const responseData = await response.json()
             setProductData(responseData)
@@ -27,16 +27,9 @@ const Home = () => {
     }, [])
 
 
-    
-
-
-
-
-
-
     /*'https://vazne.pythonanywhere.com/shop/'*/
     /*'https://fakestoreapi.com/products'*/
-    /*'http://127.0.0.1:8000/shop'*/
+    /*'http://127.0.0.1:8000/shop/'*/
 
 
     /*const [loading, setLoading] = useState(false)
@@ -81,6 +74,7 @@ const Home = () => {
                             <BiSearch size="2rem" />
                         </InputGroup.Text>
                         <FormControl
+                            style={{textAlign:"right"}}
                             placeholder="جستجوی محصول"
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
@@ -105,4 +99,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

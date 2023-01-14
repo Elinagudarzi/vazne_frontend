@@ -3,6 +3,8 @@ import { Button, Container, Col, Row, Table } from 'react-bootstrap';
 import { useCart } from 'react-use-cart';
 import { useThemeHook } from '../Globalcomponents/ThemeProvider';
 import { BsCartCheck, BsCartX, BsTrash } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+import ProductCard from '../components/ProductCard';
 
 const Cart = () => {
   const [theme] = useThemeHook();
@@ -15,7 +17,9 @@ const Cart = () => {
     emptyCart,
   } = useCart();
   return (
+
     <Container className="py-4 mt-5">
+
       <h1 style={{ fontfamily: 'Yekan' }} className={`${theme ? 'text-light' : 'text-light-primary'} my-5 text-center`}>
         {isEmpty ? 'سبد خرید شما خالی است' : 'سبد خرید'}
       </h1>
@@ -30,25 +34,32 @@ const Cart = () => {
                       background: 'white', height: '8rem', overflow: 'hidden', display: 'flex',
                       justifyContent: 'center', alignItems: 'center'
                     }}>
-                      <div style={{ padding: '.5rem' }}>
-                        <img src={item.image} style={{ width: '4rem' }} alt={item.title} />
-                      </div>
+                      <ProductCard>
+                        <div style={{ padding: '.5rem' }}>
+                          <img src={item.images} style={{ width: '4rem' }} alt={item.product_name} />
+                        </div>
+                      </ProductCard >
                     </div>
                   </td>
                   <td>
-                    <h6 style={{ whiteSpace: 'nowrap', width: '14rem', overflow: 'hidden', textOverFlow: 'ellipsis' }}>
-                      {item.title}
-                    </h6>
+                    <ProductCard>
+                      <h6 style={{ whiteSpace: 'nowrap', width: '14rem', overflow: 'hidden', textOverFlow: 'ellipsis' }}>
+                        {item.product_name}
+                      </h6>
+                    </ProductCard>
                   </td>
-                  <td>تومان {item.price}</td>
-                  <td>تعداد ({item.quantity})</td>
-                  <td>
-                    <Button onClick={() => updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
-                    <Button onClick={() => updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
-                    <Button variant="danger" onClick={() => removeItem(item.id)} className="ms-2">حذف محصول
-                      <BsTrash />
-                    </Button>
-                  </td>
+                  <ProductCard>
+                    <td>تومان {item.Unit_price}</td>
+                    <td>تعداد ({item.quantity})</td>
+
+                    <td>
+                      <Button onClick={() => updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
+                      <Button onClick={() => updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
+                      <Button variant="danger" onClick={() => removeItem(item.id)} className="ms-2">حذف محصول
+                        <BsTrash />
+                      </Button>
+                    </td>
+                  </ProductCard>
                 </tr>
               )
             })}
@@ -60,7 +71,7 @@ const Cart = () => {
             className={`${theme ? 'bg-light-black text-light' : 'bg-light text-balck'} justify-content-center w-100`}
           >
             <Col className="py-2">
-              <h4>جمع کل: Rs. {cartTotal}</h4>
+              <h4 >  جمع کل: {cartTotal}</h4>
             </Col>
             <Col className="p-0" md={4}>
               <Button variant="danger"
@@ -79,7 +90,9 @@ const Cart = () => {
             </Col>
           </Row>}
       </Row>
-    </Container>
+
+    </Container >
+
   );
 };
 

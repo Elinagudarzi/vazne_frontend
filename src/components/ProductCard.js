@@ -8,7 +8,7 @@ import { Link } from "@reach/router";
 
 
 const ProductCard = (props) => {
-    let { image, price, title, id } = props.data;
+    let { images, Unit_price, product_name, id } = props.data;
     const [theme] = useThemeHook();
     const { addItem } = useCart();
 
@@ -26,16 +26,16 @@ const ProductCard = (props) => {
                     justifyContent: 'center', alignItems: 'center', marginBottom: 'inherit'
                 }}>
                     <div style={{ width: '9rem' }}>
-                        <Card.Img variant="top" src={image} className="img-fluid" />
+                        <Card.Img variant="top" src={images} className="img-fluid" />
                     </div>
                 </div>
             </Link>
             <Card.Body className=''>
                 <Card.Title style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
-                    {title}
+                    {product_name}
                 </Card.Title>
                 <Card.Title>
-                    Rs. <span className="h3">{price}</span>
+                     <span className="h3">{Unit_price}</span> 
                 </Card.Title>
                 <Button
                     onClick={() => addToCart()}
@@ -46,8 +46,8 @@ const ProductCard = (props) => {
                 </Button>
 
 
-                <Button href='productpages' style={{padding:"7px 21px 7px 21px", border: "0px", marginTop: "5px", backgroundColor: "#191659" }} >
-                    <BsInfoCircle size="1.3rem" style={{marginRight:"10px"}} />
+                <Button href={`/product-details/${id}`} style={{ padding: "7px 21px 7px 21px", border: "0px", marginTop: "5px", backgroundColor: "#191659" }} >
+                    <BsInfoCircle size="1.3rem" style={{ marginRight: "10px" }} />
                     جزيیات محصول
                 </Button>
 

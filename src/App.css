@@ -1,9 +1,11 @@
 /* theme dark */
 .bg-black{
   background-color: black;
+  font-family: Yekan;
 }
 .bg-light-black{
   background-color: #262626 !important;
+  font-family: Yekan;
 }
 .text-black{
   color: #00447c;
@@ -12,33 +14,41 @@
 }
 .text-light-black{
   color: #262626;
+  font-family: Yekan;
 }
 .bg-dark-primary{
   background-color: #fcbc73 !important;
+  font-family: Yekan;
 }
 .text-dark-primary{
   color: #fcbc73 !important;
+  font-family: Yekan;
 }
 
 /* theme light */
 .bg-light{
   background-color: white;
+  font-family: Yekan;
 }
 .bg-light-2{
   background-color: #dadcde;
+  font-family: Yekan;
 }
 .bg-light-primary{
   background-color: #191659 !important;
+  font-family: Yekan;
   
 }
 .text-light-primary{
   color: #191659 !important;
+  font-family: Yekan;
   
 }
 
 
 .react-tel-input input{
   width: 100% !important;
+  font-family: Yekan;
 }
 
 .font-yekan{
@@ -67,3 +77,6 @@
 .product:hover .buttons {
 	opacity: 1;
 }
+
+
+

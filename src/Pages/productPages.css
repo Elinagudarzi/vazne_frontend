@@ -86,6 +86,19 @@
     
 }
 
+
+.main-cont-comment{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
+
 @media (max-width: 500px){
     .thumb{
         height: 50px;

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { ThemeContext } from '../Globalcomponents/ThemeProvider';
-import { BiSun, BiMoon, BiCart } from 'react-icons/bi';
+import { BiSun, BiMoon, BiCart, BiCompass } from 'react-icons/bi';
 import { VscAccount } from 'react-icons/vsc';
 import { Link } from "@reach/router";
 import { useCart } from "react-use-cart";
@@ -36,10 +36,15 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Link to="sign-in" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
+
+
+            <Link to="/register" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
+              <BiCompass size="1.8rem" />
               ورود/ثبت نام
             </Link>
-            
+
+
+
             <Link
               to="/cart"
               className={`${darkMode ? 'text-dark-primary' : 'text-light-primary'} d-flex align-items-center`}

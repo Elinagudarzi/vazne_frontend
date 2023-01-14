@@ -10,10 +10,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    
 }
 
 
 @font-face {
-  font-family: 'Yekan.ttf';
-  src: local('Yekan.ttf'), url(./fonts/Yekan.ttf) format('truetype');
+  font-family: 'Yekan';
+  src: local('Yekan'), url(./fonts/Yekan.ttf) format('truetype');
 }

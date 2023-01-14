@@ -1,0 +1,100 @@
+.App{
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #dadcde;
+    font-family: Yekan;
+    
+    
+  }
+  .login-div, .register-div , .login-form , .register-form{
+    display: flex;
+    flex-direction: column;
+    background-color:#F9F7F7;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Yekan;
+    margin-top: 120px;  
+    display:inline-flex;
+    
+  }
+  
+  label{
+    text-align: left;
+    
+    
+    font-size: 19px;
+    font-weight: bold;
+    font-family: Yekan;
+    text-align: right;
+  }
+  
+  input{
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border :none;
+    border-radius: 10px;
+    background-color: #DBE2EF;
+    text-align: left;
+    width: 250px;
+    
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Yekan;
+    text-align: right;
+  }
+  .headerText{
+    
+    font-size: 33px;
+    margin: 10px;
+    font-family: Yekan;
+    
+  }
+  .submitButton{
+    border: none;
+    background-color: #3F72AF;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    font-size: 17px;
+    font-weight: bold;
+    color: #F9F7F7;
+    font-family: Yekan;
+    
+  }
+  .submitButton:hover{
+    background-color: #112D4E;
+    font-family: Yekan;
+    
+  }
+  .link-btn{
+    border: none;
+    background-color: #F9F7F7;
+    text-decoration: underline;
+    padding: 1px;
+    cursor: pointer;
+    
+    font-size: 15px;
+    font-family: Yekan;
+    
+  }
+  .link-btn-hover:hover{
+    color: #112D4E;
+  }
+  .error{
+    text-align: left;
+    color: red;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-family: Yekan;
+    text-align: right;
+  }
+  .checkbox{
+    width: 30px;
+    font-family: Yekan;
+    text-align: right;
+  }

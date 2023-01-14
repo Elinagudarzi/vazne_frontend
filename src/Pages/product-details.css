@@ -1,0 +1,91 @@
+.lightbox-container .lightbox-img-thumbnail:first-child{
+    width: 60% !important;
+    font-family: Yekan;
+}
+
+.lightbox-container .lightbox-img-thumbnail{
+    width: 17% !important;
+    height: auto !important;
+    display: inline-block;
+    font-family: Yekan;
+    border: 1px solid #505050;
+    padding: 5px;
+    background-color: white;
+}
+.lightbox-backdrop.hide-controls div{
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    font-family: Yekan;
+}
+
+@media (min-width: 992px){
+    .product-details{
+        padding-left: 2rem;
+        font-family: Yekan;
+    }
+    .product-details.text-black{
+        border-left: 1px solid #00000040;
+        font-family: Yekan;
+    }
+    .product-details.text-light{
+        border-left: 1px solid #fcbc7365;
+        font-family: Yekan;
+    }
+}
+
+.main-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    
+    
+}
+
+.comment-flexbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.comment-text{
+    margin:12px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Yekan;
+}
+
+.input-box{
+    height: 75px;
+    width: 465px;
+    background-color: rgb(255, 255, 255);
+    text-align: right;
+
+}
+
+.comment-button{
+    height: 40px;
+    width: 118px;
+    background-color: hsl(239, 58%, 31%);
+    color: rgb(255, 255, 255);
+    font-size: 1.05rem;
+    font-family: Yekan;
+    border-style: none;
+    border-radius: 5px;
+    margin-top: 10px;
+
+}
+
+.comment-container{
+    height: 75px;
+    width: 465px;
+    background-color: #b9b9b9b7;
+    border-radius: 5px;
+    margin: 10px 0;
+    word-break: break-all;
+    text-align: right;
+}
