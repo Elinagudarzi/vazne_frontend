@@ -10,8 +10,9 @@ import Headers from "./components/headers";
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import ProductDetails from "./Pages/ProductDetails";
-import { Login } from "./Pages/Login";
-import { Register } from "./Pages/Register";
+import { Login } from "./Pages/login";
+import SignIn from "./Pages/SignIn";
+import Register from "./Pages/Register";
 import Homee from "./Pages/Homee";
 import { Navbar } from "react-bootstrap";
 
@@ -29,7 +30,7 @@ function App() {
           <Home path="/" />
           <Cart path="/cart" />
           <ProductDetails path="product-details/:productId" />
-          <Login path="/login" />
+          <SignIn path="/signin" />
           <Register path="register" />
         </Router>
       </main>

@@ -10,26 +10,27 @@ import { commentForm } from '../components/CommentsForm';
 
 
 const ProductDetails = (props) => {
-    let { images, Unit_price, product_name, describtion, id } = props.data;
-
     
+
+
     const [theme] = useThemeHook();
     const { addItem } = useCart();
 
+    const [productData, setProductData] = useState([]);
     //const [productdeData, setProductdeData] = useState([]);
 
-    /*useEffect(() => {
+    useEffect(() => {
         getResponse();
     }, []);
 
     const getResponse = async () => {
-        const res = await fetch(`http://127.0.0.1:8000/shop/list/${props.id}`)
+        const res = await fetch(`https://fakestoreapi.com/products/${props.productId}`)
             .then(res => res.json());
-        setProductData(await res);
-    }*/
+            setProductData(await res);
+    }
 
-    const [productData, setProductData] = useState([]);
-    useEffect(() => {
+
+    /*useEffect(() => {
         const sendRequest = async () => {
             const response = await fetch('http://127.0.0.1:8000/shop/list/', {
                 method: "GET",
@@ -39,7 +40,7 @@ const ProductDetails = (props) => {
         }
         //console.log(productData)
         sendRequest();
-    }, []);
+    }, []);*/
 
 
     ///////COMMENTS//////
@@ -57,15 +58,38 @@ const ProductDetails = (props) => {
         <Container className="py-5">
             <Row className="justify-content-center mt-5">
                 <Col xs={10} md={7} lg={5} className="p-0">
-                    {images}
+                    <Lightbox
+                        images={[
+                            {
+                                src: productData.image,
+                                title: productData.title,
+                                description: 'img 1'
+                            },
+                            {
+                                src: productData.image,
+                                title: productData.title,
+                                description: 'img 2'
+                            },
+                            {
+                                src: productData.image,
+                                title: productData.title,
+                                description: 'img 3'
+                            },
+                            {
+                                src: productData.image,
+                                title: productData.title,
+                                description: 'img 4'
+                            }
+                        ]}
+                    />
                 </Col>
                 <Col xs={10} md={7} lg={7} className={`${theme ? 'text-light' : 'text-black'} product-details`}>
-                    <h1 style={{ textAlign: "center" }}>{product_name}</h1>
+                    <h1 style={{ textAlign: "center" }}>{productData.title}</h1>
 
                     <br />
 
                     <b style={{ textAlign: "center" }} className={`${theme ? 'text-dark-primary' : 'text-light-primary'} h4 mt-3 d-block`}>
-                        قیمت: {Unit_price}   تومان
+                        قیمت: {productData.price}   تومان
                     </b>
 
                     <br />
@@ -73,7 +97,7 @@ const ProductDetails = (props) => {
 
 
                     <p className="mt-3 h5" style={{ opacity: '0.8', fontWeight: '400', textAlign: "center" }}>
-                        {describtion}
+                        {productData.description}
                     </p>
 
                     <br />

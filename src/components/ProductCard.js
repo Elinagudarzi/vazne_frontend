@@ -8,7 +8,7 @@ import { Link } from "@reach/router";
 
 
 const ProductCard = (props) => {
-    let { images, Unit_price, product_name, id } = props.data;
+    let { image, price, title, id } = props.data;
     const [theme] = useThemeHook();
     const { addItem } = useCart();
 
@@ -26,16 +26,16 @@ const ProductCard = (props) => {
                     justifyContent: 'center', alignItems: 'center', marginBottom: 'inherit'
                 }}>
                     <div style={{ width: '9rem' }}>
-                        <Card.Img variant="top" src={images} className="img-fluid" />
+                        <Card.Img variant="top" src={image} className="img-fluid" />
                     </div>
                 </div>
             </Link>
             <Card.Body className=''>
                 <Card.Title style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
-                    {product_name}
+                    {title}
                 </Card.Title>
                 <Card.Title>
-                     <span className="h3">{Unit_price}</span> 
+                     <span className="h3">{price}</span> 
                 </Card.Title>
                 <Button
                     onClick={() => addToCart()}

@@ -16,7 +16,7 @@ const Home = () => {
 
     useEffect(() => {
         const sendRequest = async () => {
-            const response = await fetch('http://127.0.0.1:8000/shop/list/',{
+            const response = await fetch('https://fakestoreapi.com/products',{
                 
             })
             const responseData = await response.json()

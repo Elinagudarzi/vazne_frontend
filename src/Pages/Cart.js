@@ -34,32 +34,31 @@ const Cart = () => {
                       background: 'white', height: '8rem', overflow: 'hidden', display: 'flex',
                       justifyContent: 'center', alignItems: 'center'
                     }}>
-                      <ProductCard>
-                        <div style={{ padding: '.5rem' }}>
-                          <img src={item.images} style={{ width: '4rem' }} alt={item.product_name} />
-                        </div>
-                      </ProductCard >
+
+                      <div style={{ padding: '.5rem' }}>
+                        <img src={item.image} style={{ width: '4rem' }} alt={item.title} />
+                      </div>
+
                     </div>
                   </td>
                   <td>
-                    <ProductCard>
+                    
                       <h6 style={{ whiteSpace: 'nowrap', width: '14rem', overflow: 'hidden', textOverFlow: 'ellipsis' }}>
-                        {item.product_name}
-                      </h6>
-                    </ProductCard>
-                  </td>
-                  <ProductCard>
-                    <td>تومان {item.Unit_price}</td>
-                    <td>تعداد ({item.quantity})</td>
+                      {item.title}
+                    </h6>
 
-                    <td>
-                      <Button onClick={() => updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
-                      <Button onClick={() => updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
-                      <Button variant="danger" onClick={() => removeItem(item.id)} className="ms-2">حذف محصول
-                        <BsTrash />
-                      </Button>
-                    </td>
-                  </ProductCard>
+                  </td>
+
+                  <td>تومان {item.price}</td>
+                  <td>تعداد ({item.quantity})</td>
+
+                  <td>
+                    <Button onClick={() => updateItemQuantity(item.id, item.quantity - 1)} className="ms-2">-</Button>
+                    <Button onClick={() => updateItemQuantity(item.id, item.quantity + 1)} className="ms-2">+</Button>
+                    <Button variant="danger" onClick={() => removeItem(item.id)} className="ms-2">حذف محصول<BsTrash /></Button>
+
+                  </td>
+
                 </tr>
               )
             })}

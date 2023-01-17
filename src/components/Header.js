@@ -38,7 +38,7 @@ const Header = () => {
           <Nav className="ms-auto">
 
 
-            <Link to="/register" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
+            <Link to="/signin" className={`nav-link ${darkMode ? 'text-dark-primary' : 'text-light-primary'}`}>
               <BiCompass size="1.8rem" />
               ورود/ثبت نام
             </Link>
